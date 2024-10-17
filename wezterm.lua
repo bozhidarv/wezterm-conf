@@ -2,6 +2,13 @@
 
 ---@type Wezterm
 local wezterm = require 'wezterm'
+local mux = wezterm.mux
+
+wezterm.on('gui-startup', function()
+  ---@type MuxTabObj, Pane, MuxWindow
+  local _, _, window = mux.spawn_window {}
+  window:gui_window():maximize()
+end)
 
 local config = wezterm.config_builder()
 
@@ -9,12 +16,15 @@ config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.color_scheme = 'tokyonight_night'
 config.font = wezterm.font_with_fallback {
-  'CommitMono',
+  'JetBrains Mono',
   'Symbols Nerd Font',
+  'Font Awesome 6 Free',
+  'Font Awesome 6 Brands',
+  'Material Icons',
 }
 config.font_size = 11
-config.max_fps = 140
-config.scrollback_lines = 3500
+config.max_fps = 144
+config.window_background_opacity = 1
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' or wezterm.target_triple == 'x86_64-pc-windows-gnu' then
   config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
@@ -29,12 +39,8 @@ local keybindings = require 'keybindings'
 
 config.keys = keybindings
 
-config.unix_domains = {
-  {
-    name = 'unix',
-  },
-}
-
-config.default_gui_startup_args = { 'connect', 'unix' }
+config.default_mux_server_domain = 'local'
+config.default_domain = 'local'
+config.scrollback_lines = 3500
 
 return config
