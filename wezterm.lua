@@ -35,6 +35,9 @@ local bar_config = require 'bar-config'
 
 bar_config.bar.apply_to_config(config, bar_config.config)
 
+local sessionizer = require 'sessionizer'
+sessionizer.apply_to_config(config)
+
 local keybindings = require 'keybindings'
 
 config.keys = keybindings

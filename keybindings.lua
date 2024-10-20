@@ -5,6 +5,7 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 local split_nav = require('pane-managment').split_nav
+local sessionizer = require 'sessionizer'
 
 ---@return Key[]
 return {
@@ -86,6 +87,11 @@ return {
         end
       end),
     },
+  },
+  {
+    key = 's',
+    mods = 'LEADER',
+    action = sessionizer.show,
   },
 
   split_nav('move', 'h'),
