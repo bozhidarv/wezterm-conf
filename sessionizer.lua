@@ -25,6 +25,7 @@ sessionizer.config = {
     '/home/bozzkoo/Documents/uni',
     '/home/bozzkoo/Documents/personal',
     '/home/bozzkoo/.config',
+    '/home/bozzkoo/dotfiles/.config',
   },
 }
 
