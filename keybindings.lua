@@ -32,7 +32,7 @@ return {
   {
     key = 'w',
     mods = 'LEADER',
-    action = act.ShowLauncherArgs { flags = 'WORKSPACES|DOMAINS' },
+    action = act.ShowLauncherArgs { flags = 'WORKSPACES' },
   },
   {
     key = 'r',

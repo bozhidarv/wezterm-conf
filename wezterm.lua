@@ -29,7 +29,7 @@ config.window_background_opacity = 1
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' or wezterm.target_triple == 'x86_64-pc-windows-gnu' then
   config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
 end
-config.leader = { key = 'a', mods = 'ALT', timeout_milliseconds = 1000 }
+config.leader = { key = 'a', mods = 'ALT', timeout_milliseconds = 3000 }
 
 local bar_config = require 'bar-config'
 

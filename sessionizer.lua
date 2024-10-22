@@ -26,6 +26,13 @@ sessionizer.config = {
     '/home/bozzkoo/Documents/personal',
     '/home/bozzkoo/.config',
     '/home/bozzkoo/dotfiles/.config',
+    'D:\\K-IMS.GangwayForecast.Worker',
+    'D:\\K-IMS.GangwayForecast',
+    'D:\\K-IMS.DPOperationalForecast',
+    'D:\\DPOperationalForecastWorker',
+    'D:\\',
+    'C:\\Users\\BozhidarVidenov\\.config',
+    'C:\\Users\\BozhidarVidenov\\AppData\\Local',
   },
 }
 
