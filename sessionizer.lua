@@ -20,6 +20,11 @@ M.toggle = function(window, pane)
     'D:\\',
     'C:\\Users\\BozhidarVidenov\\AppData',
     'C:\\Users\\BozhidarVidenov\\.config',
+    '/home/bozzkoo/.config/',
+    '/home/bozzkoo/dotfiles/.config/',
+    '/home/bozzkoo/Documents/personal/',
+    '/home/bozzkoo/Documents/work/',
+    '/home/bozzkoo/Documents/uni/',
   }
 
   if not success then
