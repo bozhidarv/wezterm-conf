@@ -55,9 +55,6 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' or wezterm.target_triple ==
     window:set_left_status(status)
   end)
 
-  local sessionizer = require 'sessionizer'
-  sessionizer.apply_to_config(config)
-
   local keybindings = require 'keybindings'
 
   config.keys = keybindings
