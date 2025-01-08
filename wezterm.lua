@@ -2,33 +2,31 @@
 
 ---@type Wezterm
 local wezterm = require 'wezterm'
-local mux = wezterm.mux
-
-wezterm.on('gui-startup', function()
-  ---@type MuxTabObj, Pane, MuxWindow
-  local _, _, window = mux.spawn_window {}
-  window:gui_window():maximize()
-end)
 
 local config = wezterm.config_builder()
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
-local kanagawa = require 'themes.kanagawa'
-
-config.colors = kanagawa.colors
+config.color_scheme = 'nord'
+-- local kanagawa = require 'themes.kanagawa'
+--
+-- config.colors = kanagawa.colors
 
 config.font = wezterm.font_with_fallback {
-  'JetBrains Mono',
+  'CommitMono',
+  'Hack',
   'Symbols Nerd Font',
   'Font Awesome 6 Free',
   'Font Awesome 6 Brands',
   'Material Icons',
 }
-config.font_size = 11
+config.font_size = 12
 config.max_fps = 144
+config.animation_fps = 144
+config.freetype_load_target = 'HorizontalLcd'
 
-config.window_background_opacity = 0.7
+-- config.window_background_opacity = 0.7
+config.window_background_opacity = 1
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' or wezterm.target_triple == 'x86_64-pc-windows-gnu' then
   config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
@@ -55,9 +53,6 @@ wezterm.on('update-status', function(window, _)
 
   window:set_left_status(status)
 end)
-
-local sessionizer = require 'sessionizer'
-sessionizer.apply_to_config(config)
 
 local keybindings = require 'keybindings'
 

@@ -32,7 +32,7 @@ return {
   {
     key = 'w',
     mods = 'LEADER',
-    action = act.ShowLauncherArgs { flags = 'WORKSPACES' },
+    action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' },
   },
   {
     key = 'r',
@@ -91,7 +91,7 @@ return {
   {
     key = 's',
     mods = 'LEADER',
-    action = sessionizer.show,
+    action = wezterm.action_callback(sessionizer.toggle),
   },
 
   split_nav('move', 'h'),
