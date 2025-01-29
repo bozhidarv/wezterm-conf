@@ -33,10 +33,10 @@ config.leader = { key = 'a', mods = 'ALT', timeout_milliseconds = 3000 }
 
 config.window_decorations = 'RESIZE'
 
-wezterm.on('gui-startup', function(cmd)
-  local _, _, window = wezterm.mux.spawn_window(cmd or {})
-  window:gui_window():maximize()
-end)
+-- wezterm.on('gui-startup', function(cmd)
+--   local _, _, window = wezterm.mux.spawn_window(cmd or {})
+--   window:gui_window():maximize()
+-- end)
 
 wezterm.on('update-status', function(window, _)
   local status_generator = require 'wez-status-generator.plugin'
