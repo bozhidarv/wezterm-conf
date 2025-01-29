@@ -93,6 +93,7 @@ return {
     mods = 'LEADER',
     action = wezterm.action_callback(sessionizer.toggle),
   },
+  { key = '[', mods = 'LEADER', action = act.ActivateCopyMode },
 
   split_nav('move', 'h'),
   split_nav('move', 'j'),
