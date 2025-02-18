@@ -25,6 +25,13 @@ return {
     action = act.SpawnTab 'CurrentPaneDomain',
   },
   {
+    key = 'f',
+    mods = 'CTRL',
+    action = wezterm.action.SpawnCommandInNewTab {
+      args = { 'yazi' },
+    },
+  },
+  {
     key = 'k',
     mods = 'LEADER',
     action = act.CloseCurrentTab { confirm = true },
