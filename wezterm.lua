@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 --
 -- config.colors = kanagawa.colors
 
-config.color_scheme = 'nord'
+config.color_scheme = 'tokyonight'
 
 config.font = wezterm.font_with_fallback {
   'CommitMono',
